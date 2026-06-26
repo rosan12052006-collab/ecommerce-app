@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Corner Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,560;0,9..144,680;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">CS</span>
+      <span class="brand-name">The Corner Shop</span>
+    </div>
+    <nav>
+      <button id="nav-catalog" class="nav-link">Catalog</button>
+      <button id="nav-wishlist" class="nav-link">Wishlist (<span id="wishlist-count">0</span>)</button>
+      <button id="nav-orders" class="nav-link">My Orders</button>
+      <button id="nav-admin" class="nav-link" style="display:none">Admin</button>
+      <button id="theme-toggle" class="nav-link" title="Toggle dark mode">&#9789;</button>
+      <span id="auth-status"></span>
+      <button id="nav-auth" class="nav-link">Log in</button>
+      <button id="nav-logout" class="nav-link" style="display:none">Log out</button>
+      <button id="nav-cart" class="cart-toggle">
+        <span class="cart-toggle-label">Basket</span>
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <span class="receipt-title">Your Basket</span>
+        <button id="drawer-close" class="drawer-close">&times;</button>
+      </div>
+      <div id="drawer-content" class="drawer-content"></div>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
